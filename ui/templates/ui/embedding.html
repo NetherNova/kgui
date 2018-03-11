@@ -1,0 +1,63 @@
+{% extends 'ui/base.html' %}
+{% load static %}
+
+{% block content %}
+<script src="{% static 'ui/js/d3.v3.js' %}"></script>
+<script src="{% static 'ui/js/scatter_plot.js' %}"></script>
+<div class="loading" id="loader"><span id="status"></span></div>
+<div id="container">
+    <div class="tab" id="vec-viz-tab">
+        <div class="box">
+            <div class="headcontainer">
+                <label id="step_label">Current Step: 0</label>
+                <button id="step_button" class="btn btn-secondary btn-sm" disabled>Next time step</button>
+                <span class="empty"> </span>
+                <input id="input_text" type="text" list="exampleList" disabled>
+                <datalist id="exampleList"></datalist>
+                <button id="filter_button" class="btn btn-secondary btn-sm" disabled>Highlight</button>
+                <label for="entityType" id="entity_label">Entity Type: </label>
+                <select id="entityType" disabled>
+                    <option value="All">All</option>
+                </select>
+            </div>
+
+            <div id="vizcontainer">
+                <svg id="vizgroup" style="width:70%; height:85%; border:1px lightgray solid; display: none;">
+                    <text name="main_info" x="900" y="80" class="info_tooltip"></text>
+                    <text name="main_info_0" x="900" y="100" class="info_tooltip"></text>
+                    <text name="main_info_1" x="900" y="120" class="info_tooltip"></text>
+                    <text name="main_info_2" x="900" y="140" class="info_tooltip"></text>
+                    <foreignObject width="100%">
+                        <div class="toolbar btn-toolbar m-1 float-right">
+                            <div class="btn-group mr-1" role="group">
+                                <button id="reset" class="btn btn-default btn-sm reset"></button>
+                            </div>
+                            <div class="btn-group mr-1">
+                                <button id="zoom" class="btn btn-default btn-sm zoom"></button>
+                            </div>
+                            <div class="btn-group mr-1">
+                                <button id="save" class="btn btn-default btn-sm save"></button>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <defs>
+                        <marker id="arrow_red" markerWidth="12" markerHeight="12"
+                                viewBox="0 -6 12 12" refX="10" refY="-0.4" orient="auto" xoverflow="visible">
+                            <path d="M0,-5L10,0L0,5" stroke="red" fill="red"></path>
+                        </marker>
+                        <marker id="arrow_blue" markerWidth="12" markerHeight="12"
+                                viewBox="0 -6 12 12" refX="11" refY="-0.5" orient="auto" xoverflow="visible">
+                            <path d="M0,-5L10,0L0,5" stroke="blue" fill="blue"></path>
+                        </marker>
+                        <marker id="arrow_green" markerWidth="12" markerHeight="12"
+                                viewBox="0 -6 12 12" refX="11" refY="-0.5" orient="auto" xoverflow="visible">
+                            <path d="M0,-5L10,0L0,5" stroke="green" fill="green"></path>
+                        </marker>
+                    </defs>
+                    <g id="embedding"></g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
