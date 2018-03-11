@@ -43,7 +43,7 @@ function getCookie(name) {
 }
 
 function start_experiment() {
-    var url = '/ui_basic/start_experiment/',
+    var url = '/ui/start_experiment/',
     settings = {
         type: 'POST',
         data: {
