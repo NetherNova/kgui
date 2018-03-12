@@ -1,0 +1,7 @@
+id,x0,x1,uri
+0,-22.600101470947266,-41.34817123413086,http://www.example.com/factory/knowledge_graph#connectsTo
+1,2.9494476318359375,-12.43095588684082,http://www.example.com/factory/knowledge_graph#hasPart
+2,-31.683069229125977,-27.09735679626465,http://www.example.com/factory/knowledge_graph#involvedIn
+3,-16.93780517578125,-8.03049087524414,http://www.example.com/factory/knowledge_graph#isFollowedBy
+4,-14.71668815612793,-27.795612335205078,http://www.example.com/factory/knowledge_graph#occursAt
+5,-24.811824798583984,-19.210479736328125,http://www.w3.org/1999/02/22-rdf-syntax-ns#type

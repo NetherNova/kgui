@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head profile="http://www.w3.org/2005/10/profile">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+        <title>WorkBench</title>
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'ui/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'ui/css/style.css' %}">
+    </head>
+    <body>
+
+        <script>
+            var static_url = "{% get_static_prefix %}";
+        </script>
+        <script src="{% static 'ui/js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'ui/js/bootstrap.min.js' %}"></script>
+        {% block content %}
+        {% endblock %}
+
+        {% load static %}
+
+    </body>
+</html>
