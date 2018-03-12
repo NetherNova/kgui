@@ -1,5 +1,5 @@
 """
-WSGI config for viz_test project.
+WSGI config for kgui project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
